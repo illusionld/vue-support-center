@@ -1,7 +1,8 @@
+
 let baseUrl
 
 export async function $fetch(url) {
-    const response = awaitfetch(`${baseUrl}${url}`)
+    const response = await fetch(`${baseUrl}${url}`)
     if (response.ok) {
         const data = await response.json()
         return data
